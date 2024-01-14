@@ -52,7 +52,7 @@ jobs:
       - name: Check out the repo
         uses: actions/checkout@v4
         with:
-          repository: Ornez/lab10_config
+          repository: Ornez/fullstack-lab10-config
           token: ${{ secrets.ACTIONS_TOKEN }}
       - run: |
           sed -i 's/student232323\/lab10-app:.*/student232323\/lab10-app:${{ needs.dockerCI.outputs.version_number }}/g' lab10-deployment.yaml
